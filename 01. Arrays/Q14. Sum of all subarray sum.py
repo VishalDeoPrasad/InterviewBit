@@ -1,5 +1,5 @@
 class Solution:
-    def subarraySum(self, A):
+    def subarraySum2(self, A):
         n = len(A)
         total_sum = 0
         for i in range(n):
@@ -10,4 +10,22 @@ class Solution:
                 total_sum += sum(A[i:j+1])
         return total_sum
 
-print(Solution().subarraySum([2,1,3]))
+    def subarraySum1(self, A):
+        n = len(A)
+        total_sum = 0
+        for i in range(n):
+            sumi = 0
+            for j in range(i, n):
+                sumi += A[j]
+                total_sum += sumi
+
+        return total_sum
+    
+    def subarraySum(self, A):
+        result = 0
+        n = len(A)
+        for i in range(0, n):
+            result += (A[i] * (1+i) * (n-i))
+        return result
+
+print(Solution().subarraySum([1,2,3]))
