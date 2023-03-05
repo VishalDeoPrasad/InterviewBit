@@ -23,9 +23,10 @@ class Rotation:
             T[i] = self.reverse(T[i])
         print(T)
 
+m = [[1,2],[3,4]]
 mat = [[1,2,3,4],[4,5,6,7],[7,8,9,10]]
 mat1 = [[1,2,3],[4,5,6],[7,8,9], [10,11,2]]
 mat2 = [[1,2],[5,6],[8,9], [11,12]]
 # print(mat)
 # print(Rotation().Transpose(mat))
-print(Rotation().degree(mat))
+print(Rotation().degree(m))
