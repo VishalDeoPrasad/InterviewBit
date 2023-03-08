@@ -16,12 +16,10 @@ class Rotation:
         return A
     
     def degree(self, A):
-        print(A)
         T = self.Transpose(A)
-        print(T)
         for i in range(len(T)):
             T[i] = self.reverse(T[i])
-        print(T)
+        return T
 
 m = [[1,2],[3,4]]
 mat = [[1,2,3,4],[4,5,6,7],[7,8,9,10]]
