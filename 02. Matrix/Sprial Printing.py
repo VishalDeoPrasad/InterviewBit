@@ -19,7 +19,7 @@ class Sprial:
     def sprial(self, Mat):
         M, N = len(Mat), len(Mat[0])
         i,j = 0,0
-        while N>1:
+        while N>1 and M>1:
             self.boundary(Mat, i, j, M, N)
             print()
             M = M-2
@@ -48,5 +48,13 @@ mat2 = [
             [4, 5, 6, 7, 8, 9],
             [7, 8, 9, 10,11,12], 
             [11,12,13,14,13,14]
+    ]
+
+mat3 = [
+            [1, 2, 3, 4, 5, 6],
+            [4, 5, 6, 7, 8, 9],
+            [7, 8, 9, 10,11,12], 
+            [11,12,13,14,13,14],
+            [15,16,17,18,19,20]
     ]
 Sprial().sprial(mat2)
