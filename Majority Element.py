@@ -1,5 +1,5 @@
 class Solution:
-    def majorityElement(self, A):
+    def majorityElement1(self, A):
         dic = {}
         for i in range(len(A)):
             if A[i] not in dic:
@@ -12,4 +12,4 @@ class Solution:
                 return key
         return 0
 
-print(Solution().majorityElement([2,1,2]))
+print(Solution().majorityElement([2,1,2,2,4,9,6,2,2]))
