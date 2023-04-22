@@ -1,6 +1,6 @@
 class Solution:
     def solve(self, A):
-        A = "".join(s for s in A)
+        A = "".join(A)
         for i in range(97, 123):
             if chr(i) not in A:
                 return 0
