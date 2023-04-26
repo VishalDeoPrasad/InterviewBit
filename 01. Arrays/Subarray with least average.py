@@ -22,6 +22,7 @@ class Solution:
         axu.append((least_sum, 0, B-1))
         for i in range(B, len(A)):
             least_sum = least_sum+A[i]-A[i-B]
+            print(least_sum, end = " ")
             axu.append((least_sum,i-B+1, i))
         
         avg = axu[0][0]/B
@@ -30,14 +31,23 @@ class Solution:
             if axu[i][0]/B < avg:
                 avg = axu[i][0]/B
                 idx = axu[i][1]
-        return idx
-
+        return idx,avg
+    
+    def solve1(self, A, B):
+        next_sum = sum(A[:B])
+        idx = 0
+        min_avg = next_sum/B
+        for i in range(B, len(A)):
+            next_sum = next_sum + A[i] - A[i-B]
+            print(next_sum, end=" ")
+            if min_avg > next_sum/B:
+                min_avg = next_sum/B
+                idx = i-B+1
         
+        return idx, min_avg
 
-
-
-
-
+A = [ 18, 11, 16, 19, 11, 9, 8, 15, 3, 10, 9, 20, 1, 19 ]
+B = 1
 
 A1=[3, 7, 90, 20, 10, 50, 40]
 B1=3
@@ -45,4 +55,8 @@ B1=3
 A2=[3, 7, 5, 20, -10, 0, 12]
 B2=2
 
-print(Solution().solve(A1, B1))
+A3 =[ 15, 7, 11, 7, 9, 8, 18, 1, 16, 18, 6, 1, 1, 4, 18 ]
+B3 = 6
+
+print(Solution().solve(A3, B3))
+print(Solution().solve1(A3, B3))
