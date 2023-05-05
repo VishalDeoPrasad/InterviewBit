@@ -8,5 +8,5 @@ class Solution:
             arm_sum += a**p
             n = n//10
         return 1 if arm_sum == A else 0
-
+ 
 print(Solution().solve(371))
