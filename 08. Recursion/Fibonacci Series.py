@@ -1,6 +1,9 @@
-def RecursionFibonacci(N):
-    if N==1 or N==0:
-        return 1
-    return RecursionFibonacci(N-1)+RecursionFibonacci(N-2)
+class Solution(object):
+    def fib(self, n):
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
 
-print(RecursionFibonacci(5))
+        return self.fib(n-1)+self.fib(n-2)
+print(Solution().fib(6))
