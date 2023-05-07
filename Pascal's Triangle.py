@@ -13,5 +13,5 @@ class Solution:
             pascal.append(temp)
         return pascal
     
-print(Solution().getRow(5))
+print(Solution().getRow(3))
                     
