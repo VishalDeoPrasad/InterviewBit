@@ -5,7 +5,7 @@ class Node:
         self.right = None
 
 class Tree:
-    def insert(self,node,value):
+    def insert (self,node,value):
         if node is None:
             return Node(value)
         if value < node.data:
