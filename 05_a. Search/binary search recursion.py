@@ -5,9 +5,9 @@ def binary_search(lst, key, left, right):
     
     #base case 2: if element found return index
     mid = (left+right)//2
+    
     if lst[mid] == key:
         return mid
-    
     if key > lst[mid]:
         return binary_search(lst, key, mid+1, right)
     elif key < lst[mid]:
