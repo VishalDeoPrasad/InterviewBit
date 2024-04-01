@@ -10,13 +10,13 @@ class BitManipulation:
 
     def UniqueElement(self, arr):
         a=0
-        left = 0
-        right = 0
         for i in range(len(arr)):
             a = a^arr[i]
 
         set_pos = self.SetBitPos(a)
 
+        left = 0
+        right = 0
         for i in range(len(arr)):
             if self.CheckBit(arr[i], set_pos):
                 left = left^arr[i]
